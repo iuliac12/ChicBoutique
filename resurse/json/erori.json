@@ -1,0 +1,58 @@
+{
+
+    "cale_baza": "/resurse/imagini/erori",
+    "eroare_default":
+    {
+        "titlu":"Error",
+        "text": "Error identified.",
+        "imagine":"interzis.jpg"
+    },
+    "info_erori": [
+        {
+            "identificator":404,
+            "status":true,
+            "titlu":"404 - Page not found!",
+            "text": "We looked everywhere for this page. Are you sure the website URL is correct?",
+            "imagine":"lupa.jpg"
+        },
+        {
+            "identificator":403,
+            "status":true,
+            "titlu":"403 - Access forbidden!",
+            "text": "You dont't have access to enter this file!",
+            "imagine":"interzis.jpg"
+        },
+        {
+            "identificator":400,
+            "status":true,
+            "titlu":"400 - Bad request",
+            "text": "The page isn't working!",
+            "imagine":"interzis.jpg"
+        },
+        
+        {
+            "identificator":1,
+            "status":false,
+            "titlu":"Site loading",
+            "text": "Working working working ...",
+            "imagine":"interzis.jpg"
+        },
+        
+        {
+            "identificator":2,
+            "status":false,
+            "titlu":"Error data",
+            "text": "Please, come back later!",
+            "imagine":"interzis.jpg"
+        },
+        
+        {
+            "identificator":3,
+            "status":false,
+            "titlu":"Error data",
+            "text": "Check again!",
+            "imagine":"interzis.jpg"
+        }
+    ]
+}
+  

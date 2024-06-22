@@ -1,0 +1,92 @@
+
+<header>
+    <br/>
+    <h1>Chic Boutique</h1>
+    <div>
+        <label for="moon_theme">
+            <input type="radio" id="moon_theme" name="tema" value="moon">
+            <i class="fa-solid fa-moon tema_icon"></i>
+        </label>
+        <label for="sun_theme">
+            <input type="radio" id="sun_theme" name="tema" value="sun" checked>
+            <i class="fa-solid fa-sun tema_icon"></i>
+        </label>
+        <label for="palette_theme">
+            <input type="radio" id="palette_theme" name="tema" value="palette">
+            <i class="fa-solid fa-palette tema_icon"></i>
+        </label>
+    </div>
+    
+    <script src="/resurse/js/tema.js"></script>
+</header>
+<br>
+
+<nav>   
+    <label id="hamburger" for="ch-menu">
+        <img src="resurse/imagini/hamburgerr.jpg" alt="menu">
+    </label>    
+    
+    <input id="ch-menu" type="checkbox">
+    <ul class="meniu">
+            <li> 
+                <div class="acasa-mediu"> 
+                        <span class = "fas fa-regular fa-house"></span> 
+                        <span id = "acasa">Home Page</span>
+                </div>
+                <ul>
+                        <li><a href="/index#welcome">Bine ati venit!</a></li>
+                        <li><a href="/index#promotii">Promotii</a></li>
+                        <li><a href="/index#intrebari">Intrebari frecvente</a></li>
+                        <li><a href="/index#tab-orar">Orar</a></li>     
+         
+                </ul>
+            </li>
+
+            <li><a href="/inregistrare">Inregistrare</a></li>
+            <li><a href="/index#date_server">Despre</a></li>
+
+
+            <li><div>Produse</div>
+                <ul>
+                    <li><a href="/produse">Toate</a></li>
+
+                
+                    <% if (Array.isArray(optiuni_meniu)) { %>
+                        <% for (let opt of optiuni_meniu) { %>
+                            <li><a href="/produse?tip=<%= opt.unnest %>"><%= opt.unnest %></a></li>
+                            <% } %>
+                    <% } %>
+<!--
+                        <li><a href="/produse?tip=Rochie de zi">Rochii de zi</a></li>
+                        <li><a href="/produse?tip=Rochie de seara">Rochii de seara</a></li>
+                        <li><a href="/produse?tip=Cocktail Party">Cocktail Party</a></li>
+                        <li><a href="/produse?tip=Rochie mini">Rochii mini</a></li>
+                        <li><a href="/produse?tip=Rochie medium">Rochii medium</a></li>
+                        <li><a href="/produse?tip=Rochie lunga">Rochii lungi</a></li>
+
+-->
+            
+                    
+                </ul>
+            </li>
+
+         <!--
+         <li><div>Colectii</div>
+                <ul>
+                
+                    <li><a href="/produse?categorie=Event">Event</a></li>
+                    <li><a href="/produse?categorie=Office">Office</a></li>
+                    <li><a href="/produse?categorie=Urban Street">Urban Street</a></li>
+                    <li><a href="/produse?categorie=City Chic">City Chic</a></li>
+                </ul>
+            </li>
+         -->
+           
+            
+            <li><a href="/index#limited_edition">Limited edition</a></li>
+
+            <%- include("submeniu-administrare.ejs")%>
+            <%- include("submeniu-utilizator-logat.ejs")%>
+
+    </ul>
+</nav>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html  lang="ro">
+    <head> 
+      <meta name="keywords" content=" fashion, rochii, casual, eleganta, moda, stil, confort, gama, garderoba, piese versatile, rochie dama, rochie seara, rochie cocktail, rochie scurta, rochie lunga, eveniment, limited edition, transport la domiciliu, Bucuresti, Romania">
+                                        <!--cuvintele cheie ale paginii; majoritatea motoarelor de căutare ignoră keywords -->
+            <meta name="description" content="Chic Boutique se distinge prin oferirea unor modele exclusive de rochii, proiectate pentru femeia moderna si eleganta. 
+                                              Fiecare piesa imbina confortul si stilul intr-un design unic ce pune in valoare frumusetea celor care le poarta. 
+                                              Este destinatia perfecta pentru a descoperi eleganta si originalitatea. ">
+                                              <!-- descrierea paginii, adesea apare sub link când sunt afișate rezultatele căutării -->
+        <title>Chic Boutique</title>
+        <link rel="stylesheet" type="text/css" href="/resurse/css/eroare.css">
+        <%- include("../fragmente/head.ejs") %>   
+    </head>
+        
+
+    <body>
+        
+    <%- include("../fragmente/header.ejs")  %> 
+
+    <main>
+        <div id="err-coloane">
+			    <div id="err-imag">
+				    <img src="<%- locals.imagine %>" />
+			    </div>
+          <section>
+            <h2><%- locals.titlu %></h2>
+            <p><%- locals.text %></p>
+          </section>
+		    </div>
+    </main>
+   
+
+    </body>
+</html>

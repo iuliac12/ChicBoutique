@@ -1,0 +1,124 @@
+html{
+    --culoare1:rgb(234, 196, 202); 
+    --culoare2:rgb(165, 49, 70);
+    --culoare3:rgb(154, 80, 146);
+    --culoare4:rgb(228, 91, 196);
+    --culoare5:white;
+    --culoare6:black;
+    --culoare7: rgb(168, 123, 151);
+  }
+
+
+
+  /**/
+
+  .input-invalid {
+    border: 2px solid red; 
+}
+
+main{
+    padding-left:var(--padd-main);
+    padding-right:var(--padd-main);
+}
+
+.grid-produse{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:1rem;
+}
+.grid-produse .produs{
+    border-radius: 2rem;
+    box-shadow: 0px 0px 0.8rem 0.3rem grey;
+    overflow: hidden;
+
+}
+
+.container {
+    display: flex;
+    gap: 2rem;
+}
+
+.left-column {
+    flex: 1;
+}
+
+.right-column {
+    flex: 1;
+}
+
+.grid-produse .produs h3{
+    background-color: var(--culoare1);
+    text-align: center;
+    margin-top: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.grid-produse .produs h3 a{
+    color:black;
+}
+.grid-produse .produs h3 a:hover{
+    color:white;
+}
+
+
+.grid-produse .produs figure{
+    text-align: center;
+}
+.grid-produse .produs figure img{
+    border:1px solid var(--culoare1);
+}
+
+.grid-produse .produs .info-prod{
+    display:flex;
+    background-color: var(--culoare5);
+}
+
+.grid-produse .produs .info-prod p{
+    width:30%;
+    text-align:center;
+    font-weight:bold;
+}
+
+.grid-produse .produs p.categorie{
+
+    text-align:center;
+    font-weight:bold;
+}
+
+.info-produse{
+    background-color: var(--cl-marcare);
+    padding:0.2rem;
+    box-shadow: 0px 0px 0.5rem 0.15rem grey;
+}
+
+.produs{
+    position: relative;
+}
+
+.container .categorie{
+    font-size: 25px;
+}
+
+.container .val-categorie{
+    font-style: italic;
+}
+
+.selecteaza-cos{
+    display: inline-block;
+    background-color: var(--culoare1);
+    position:absolute;
+    bottom:0.5rem;
+    right:0.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    padding:0.3rem;
+    border:1px solid transparent;
+}
+
+.selecteaza-cos:hover{
+    color: var(--culoare5);
+    font-style: bold;;
+    background-color: var(--culoare2);
+    border:3px solid  var(--culoare1);
+}

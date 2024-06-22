@@ -1,0 +1,35 @@
+<script type="text/javascript" src="/resurse/js/galerie_animata.js"></script>
+
+
+
+<h2>Galerie Dinamica Chic Boutique</h2>      
+<div id="galerie-animata">      
+    <div id="derulare">
+        <%   
+            function getRandomOdd(min, max) {
+                ///genereaza un nr impar aleatoriu intre min si max
+                let num;
+                do {
+                    ///Math.random => [0,1)
+                    num = Math.floor(Math.random() * (max - min + 1)) + min; /// [min, max]
+                } while (num % 2 === 0);
+                return num;
+            }
+            
+            let numberOfPhotos = getRandomOdd(5, 11); 
+            
+            for (let i = 0; i < numberOfPhotos && i < locals.imagini.length; i++) { 
+        %>                           
+            <figure class="box">                               
+                <picture>
+                    <source srcset="<%= locals.imagini[i].fisier_mediu %>" media="(max-width:1200px)"/>
+                    <source srcset="<%= locals.imagini[i].fisier_mic %>" media="(max-width:600px)"/>
+                    <img src="<%= locals.imagini[i].fisier %>" alt="imagine">
+                </picture>
+                <figcaption><%= locals.imagini[i].descriere %></figcaption>                            
+            </figure>                   
+        <%  
+            } 
+        %>                        
+    </div>  
+</div>

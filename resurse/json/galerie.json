@@ -1,0 +1,104 @@
+{
+	"cale_galerie":"resurse/imagini/galerie",
+	"imagini": [
+		{
+			"fisier":"r1.jpg",
+			"descriere":"Effortless Glamour",
+            "sfertOra": [1,3],
+            "autor": {
+                "nume": "Shanaya",
+                "sursa": "https:/https://ro.pinterest.com/pin/990088299327061647/",
+                "licenta": "CC-BY 4.0"
+                    }        		},
+		{
+			"fisier":"r2.jpg",
+			"descriere":"Bohemian Chic",
+            "sfertOra": [1,4]		},
+		{
+			"fisier":"r3.jpg",
+			"descriere":"Luxurious Silk",
+            "sfertOra": [2,3]		},
+		{
+			"fisier":"r7.jpg",
+			"descriere":"Classic Lace",
+            "sfertOra": [1,2]		},
+		{
+			"fisier":"r4.jpg",
+			"descriere":"Vibrant Print",
+            "sfertOra": [3,4]       },
+		{
+			"fisier":"r6.jpg",
+			"descriere":"Timeless Black",
+            "sfertOra": [2,4]       },
+        {
+			"fisier":"r8.jpg",
+			"descriere":"Vintage Elegance",
+            "sfertOra": [2,4]
+		                            },
+        {
+			"fisier":"r9.jpg",
+			"descriere":"Sophisticated Glamour",
+            "sfertOra": [2,3]
+		                            },
+        {
+			"fisier":"r10.jpg",
+			"descriere":"Artsy Eclectic",
+            "sfertOra": [2,1]
+		                            },
+        {
+			"fisier":"r11.jpg",
+			"descriere":"Monochrome Minimalism",
+            "sfertOra": [2,3]
+		                            },
+        {
+			"fisier":"r12.jpg",
+			"descriere":"Romantic Florals",
+            "sfertOra": [2,4]
+		                            },
+        {
+			"fisier":"r13.jpg",
+			"descriere":"Edgy Glamour",
+            "sfertOra": [1,3]
+		                            },
+        {
+			"fisier":"r14.jpg",
+			"descriere":"Vintage Chic",
+            "sfertOra": [2,3]
+		                            },
+        {
+			"fisier":"r15.jpg",
+			"descriere":"Effortless Chic",
+            "sfertOra": [1,4]
+		                            },
+        {
+			"fisier":"r16.jpg",
+			"descriere":"Timeless Sophistication",
+            "sfertOra": [1,3]
+		                            },
+        {
+			"fisier":"r17.jpg",
+			"descriere":"Parisian Chic",
+            "sfertOra": [1,4]
+		                            },
+        {
+			"fisier":"r18.jpg",
+			"descriere":"Modern Minimalism",
+            "sfertOra": [2,4]
+		                            },
+        {
+			"fisier":"r19.jpg",
+			"descriere":"Urban Edge",
+            "sfertOra": [1,4]
+		                            },
+        {
+			"fisier":"r20.jpg",
+			"descriere":"Monochrome Magic",
+            "sfertOra": [3,4]
+		                            },
+        {
+			"fisier":"r22.jpg",
+			"descriere":"Preppy Charm:",
+            "sfertOra": [1,3]
+		                            }
+	]
+}

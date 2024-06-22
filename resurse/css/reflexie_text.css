@@ -1,0 +1,115 @@
+
+#reflexie-text {
+  position: absolute; /* plaseaza in raport cu parintele */
+  transform-origin: 0 0; 
+  /*conteaza ordinea transformarilor!
+  - roteste pe Ox
+  - skew => inclinare
+  - scale => reduce inaltimea 
+  - translate => deplaseaza textul
+  */
+  transform: rotateX(180deg) skew(-45deg) scaleY(0.5) translate(10px, -25px);
+  opacity: 0.8;
+
+  
+  background: -webkit-repeating-linear-gradient(top, #eee 0%, #212020 20%);
+  -webkit-background-clip: text;   /* aplica gradientul doar pe text */
+  -webkit-text-fill-color: transparent; 
+  margin:0px;
+}
+
+#text-reflectat:hover + #reflexie-text, #reflexie-text:hover {
+  animation: wave 2s linear infinite reverse; 
+}
+
+#text-reflectat {
+  position: relative;
+  margin:0px
+}
+
+#text-reflectat, #reflexie-text {
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+@keyframes wave {
+  /* schimba pozitia si dimensiunea gradientului liniar pe text  dand impresia de unda */
+  0% {
+    background: repeating-linear-gradient(to top, #212020 50%, #eee 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  10% {
+    background: repeating-linear-gradient(to top, #212020 45%, #eee 65%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  20% {
+    background: repeating-linear-gradient(to top, #212020 40%, #eee 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  30% {
+    background: repeating-linear-gradient(to top, #212020 35%, #eee 55%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  40% {
+    background: repeating-linear-gradient(to top, #212020 30%, #eee 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  50% {
+    background: repeating-linear-gradient(to top, #212020 25%, #eee 45%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  60% {
+    background: repeating-linear-gradient(to top, #212020 20%, #eee 40%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  70% {
+    background: repeating-linear-gradient(to top, #212020 15%, #eee 35%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  80% {
+    background: repeating-linear-gradient(to top, #212020 10%, #eee 30%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  90% {
+    background: repeating-linear-gradient(to top, #212020 5%, #eee 25%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  100% {
+    background: repeating-linear-gradient(to top, #212020 0%, #eee 20%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+}

@@ -1,0 +1,99 @@
+body{
+    --culoare1:rgb(234, 196, 202); 
+    --culoare2:rgb(165, 49, 70);
+    --culoare3:rgb(154, 80, 146);
+    --culoare4:rgb(228, 91, 196);
+    --culoare5:white;
+    --culoare6:black;
+
+    --spatiere:70px;
+    padding-left: var(--spatiere);
+    padding-right: var(--spatiere);
+
+}
+
+p{
+    color:var(--culoare6);
+}
+
+h1 {
+    font-family: "Handlee", cursive;
+    font-size: 50px;
+}
+
+h2{
+    background-color: var(--culoare1);
+    font-family: "Didact Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+math {
+    font-family: Arial, sans-serif; 
+    font-size: 16px; 
+    color: var(--culoare2);
+    margin: 10px 0; 
+    padding: 10px; 
+    border: 1px solid var(--culoare1);
+    border-radius: 7px; 
+    }
+math mi {
+    font-style: italic; /* Stil italic pentru identificatori */
+        }
+math mo {
+    font-weight: bold; /* Text bold pentru operatori */
+        }
+math mfrac {
+    font-size: 14px; /* Dimensiune font pentru fractii */
+            }
+
+
+.icon-and-title{
+    display: flex;
+    align-items: center;
+}
+
+.icon-and-title i {
+    margin-right: 8px; /* Adjust spacing as needed */
+}
+
+
+/*animatie meniu*/
+
+#acasa {
+    margin-left: 10px;
+    opacity: 0;
+    transition: opacity 0.7s ease;
+}
+
+.acasa-mediu:hover #acasa {
+    opacity: 1;
+}
+
+.meniu li:hover > ul {
+    display: block;
+    position: absolute;
+    z-index: 100;
+    animation: animatie_submeniu 1s linear 1 forwards;
+  }
+  
+  .meniu li:hover div, .meniu li:hover > a {
+    background-color: var(--culoare1);
+    color: var(--culoare2);
+    font-weight: bold;
+  }
+  
+  /*submeniu*/
+  .meniu ul {
+    display: none;
+    opacity: 0;
+    transform-origin: center top;
+    transform: scale(0);
+  }
+  
+  @keyframes animatie_submeniu {
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }

@@ -1,0 +1,88 @@
+#galerie-animata {
+  position: relative;
+  overflow: hidden;
+  width: 600px;
+  height: 400px;
+  padding: 0px;
+}
+#galerie-animata figure figcaption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  font-size: 1em;
+  background: rgba(200, 200, 200, 0.5);
+  text-align: center;
+}
+#galerie-animata * {
+  height: 100%;
+  width: auto;
+}
+
+#derulare {
+  flex-wrap: nowrap;
+  position: absolute;
+  top: 0%;
+  width: 100%;
+}
+#derulare > * {
+  flex-shrink: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#derulare:hover .animated {
+  animation-play-state: paused;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  border: 20px solid transparent;
+  border-image: url("../imagini/background_dinamica.jpg") 30 round;
+}
+
+.op {
+  opacity: 0;
+}
+
+@keyframes shrinkAndRotate {
+  0% {
+    clip-path: circle(50%);
+    transform: translate(-50%, -50%) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    clip-path: circle(25%);
+    transform: translate(-50%, -50%) rotate(180deg);
+    opacity: 0.5;
+  }
+  100% {
+    clip-path: circle(0%);
+    transform: translate(-50%, -50%) rotate(360deg);
+    opacity: 0;
+  }
+}
+.animated {
+  animation: shrinkAndRotate 3s forwards;
+}
+
+/* nu se afiseaza pe ecran mic si mediu */
+@media (max-width: 800px) {
+  #galerie-animata {
+    display: none;
+  }
+  h2 {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  #galerie-animata {
+    display: none;
+  }
+  h2 {
+    display: none;
+  }
+}

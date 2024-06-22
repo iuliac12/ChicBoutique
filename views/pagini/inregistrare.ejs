@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+            <meta name="keywords" content=" fashion, rochii, casual, eleganta, moda, stil, confort, gama, garderoba, piese versatile, rochie dama, rochie seara, rochie cocktail, rochie scurta, rochie lunga, eveniment, limited edition, transport la domiciliu, Bucuresti, Romania"><!--cuvintele cheie ale paginii; majoritatea motoarelor de căutare ignoră keywords -->
+            <meta name="description" content="Chic Boutique - înregistrare utilizatori"><!-- descrierea paginii, adesea apare sub link când sunt afișate rezultatele căutării -->
+            <title>Chic Boutique - înregistrare</title>
+            <%- include("../fragmente/head") %>     
+            <script type="text/javascript" src=/resurse/js/inregistrare.js></script>
+
+    </head>
+    <body>
+    <%- include("../fragmente/header") %>
+    <%- include("../fragmente/head.ejs") %> <!-- copiaza caracter cu caracter continutul fisierului-->
+
+
+    <main>
+        <div class="afisaj">
+            <h1>Inregistrare utilizator</h1>
+            <% if(!locals.raspuns) { %>    
+    
+                <%-include("../fragmente/formular", {action: "/inregistrare"}) %>
+            <% } %>
+            
+        <% if(locals.raspuns) { %>
+        <%- locals.raspuns+"<br/>"%>
+        <% } %>
+        <% if(locals.err) { %>
+        <%- locals.err %>
+        <% } %>
+        </div>
+    </main>
+    
+    <footer>
+        <%- include("../fragmente/footer") %>
+    </footer>
+    </body>
+</html>

@@ -1,0 +1,64 @@
+html{
+    --culoare1:rgb(234, 196, 202); 
+    --culoare2:rgb(165, 49, 70);
+    --culoare3:rgb(154, 80, 146);
+    --culoare4:rgb(228, 91, 196);
+    --culoare5:white;
+    --culoare6:black;
+    --culoare7: rgb(168, 123, 151);
+  }
+
+
+/* Modal box */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 80%; 
+    height: 80%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+}
+
+/* Modal content box */
+.modal-content {
+    margin: 5% auto; 
+    padding: 20px;
+    width: 50%; 
+    max-height: 75%; 
+    overflow-y: auto; /* content overflows */
+    border-radius: 30px;
+    box-shadow: 0px -25px 25px rgba(236, 95, 201, 0.3),
+                0px 25px 25px rgba(236, 95, 201, 0.3);
+}
+
+.close {
+    color: var(--culoare2);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--culoare6);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+#modalDetails h3, #modalDetails p {
+    color: var(--culoare2);
+    margin: 10px 0;
+}
+
+#modalDetails h3 {
+    border-bottom: 2px solid var(--culoare3);
+    padding-bottom: 10px;
+}
+
+.modal-content {
+    padding: 30px;
+}

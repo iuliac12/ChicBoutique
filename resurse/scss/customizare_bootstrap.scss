@@ -1,0 +1,208 @@
+@use '../../node_modules/bootstrap/scss/bootstrap.scss' with 
+(
+    $primary: pink,
+    $secondary: purple,
+
+    ///Dimensiunile pentru ecranele medii si mari
+    $grid-breakpoints: (
+    xs: 0,
+    sm: 540px,
+    md: 780px,
+    lg: 850px,
+    xl: 1200px,
+    xxl: 1400px
+                        ),
+    $border-radius: 8px, // Dimensiunea razei border-ului
+
+);
+$border-radius: 8px; 
+$border-width: 2px;
+$primary: pink;
+$secondary: purple;
+
+    //Schimbam culoarea butonului
+    .btn-primary {
+        color: white 
+    }
+
+h1 {
+    font-size: 2rem; 
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 20px;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 1.5em; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 20px;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+///Familia de font default
+html, body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+///stil pentru paragrafe
+p{
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+///stil pentru imagini si SVG
+img, svg {
+    vertical-align: unset;
+}
+
+
+////culori de background teme
+$light-theme-background-color: rgb(241, 224, 227);
+$dark-theme-background-color: rgb(0, 0, 0);
+
+.light-theme {
+    background-color: $light-theme-background-color;
+    
+}
+
+.dark-theme {
+    background-color: $dark-theme-background-color;
+    font-style: normal;
+    color: white;
+}
+
+
+// Stilizare input-uri
+
+#inp-nume{
+    margin-top: 10px;
+}
+
+input[type="text"] {
+    border-radius: $border-radius; 
+    border-width: $border-width;
+    font-size: 1rem; 
+    padding: 0.5rem; 
+    margin-right: 0.5rem; 
+}
+
+ input[type="range"] {
+    border-radius: $border-radius; 
+    border-width: $border-width;
+    font-size: 1.5rem; 
+    padding: 0.5rem; 
+    margin-right: 0.5rem; 
+}
+
+
+// Stilizare butoane
+
+.btn-custom {
+    border-color: var(--culoare2);
+    border-radius: $border-radius;
+    border-width: $border-width;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    margin: 3px;
+}
+
+.btn-custom:hover {
+    border-radius: $border-radius;
+    border-width: $border-width;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    margin: 3px;
+    background-color: var(--culoare2);
+    color: var(--culoare5);
+    font-weight: bold;
+}
+
+//Ecran mic
+@media (max-width: 560px) {
+    .btn-text {
+        display: none;
+    }
+}
+
+//Toggle buttons
+
+.toggle .btn input[type="radio"] {
+    display: none;
+}
+
+/// stilizare switch tema
+
+#schimba_tema {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--culoare5);
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.6s ease, color 0.6s ease;
+
+  i {
+    transition: transform 0.6s ease-in-out;
+  }
+
+  &.dark-mode {
+    background-color: var(--culoare6);
+    color: var(--culoare5);
+
+    i {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+
+///Stilizare input de tip range
+
+$font-size-base: 14px;
+$custom-range-thumb-dimension: 2em; // Bulina este cu 50% mai mare decât dimensiunea fontului
+$custom-range-thumb-color: var(--culoare2); // Culoarea bulinei
+$custom-range-track-bg: var(--culoare1); // Culoarea sliderului
+
+// Custom styles for range input
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 1px; ///slider tracker
+    background: var(--culoare1); 
+    outline: none;
+    opacity: 0.7;
+}
+
+.container_label{
+    display: flex;
+}
+
+input[type="range"] 
+{
+    margin: 7px;
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 1.5em; 
+        height: 1.5em;
+        background: var(--culoare2); 
+        cursor: pointer;
+        border-radius: 50%; 
+    }
+    
+    &::-moz-range-thumb {
+        width: 1.5em; 
+        height: 1.5em; 
+        background: var(--culoare2); 
+        cursor: pointer;
+        border-radius: 50%; 
+    }
+  
+}

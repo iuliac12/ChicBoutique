@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+            <%- include("../fragmente/head.ejs") %> <!-- copiaza caracter cu caracter continutul fisierului-->
+
+            <meta name="keywords" content=" fashion, rochii, casual, eleganta, moda, stil, confort, gama, garderoba, piese versatile, rochie dama, rochie seara, rochie cocktail, rochie scurta, rochie lunga, eveniment, limited edition, transport la domiciliu, Bucuresti, Romania"><!--cuvintele cheie ale paginii; majoritatea motoarelor de căutare ignoră keywords -->
+            <meta name="description" content="Chic Boutique se distinge prin oferirea unor modele exclusive de rochii, proiectate pentru femeia moderna si eleganta. 
+                                              Fiecare piesa imbina confortul si stilul intr-un design unic ce pune in valoare frumusetea celor care le poarta. 
+                                              Este destinatia perfecta pentru a descoperi eleganta si originalitatea. "><!-- descrierea paginii, adesea apare sub link când sunt afișate rezultatele căutării -->
+            <title>Chic Boutique</title>
+    </head>
+    <body>
+
+    <%- include("../fragmente/header.ejs") %>
+            <main>
+                <div id="grid-pagina">
+            
+                    <section id = "welcome">
+                                <h2>Bine ati venit!</h2>
+                                <!-- locals dintr-un fragment trebuie transmis (nu mosteneste prop locals din pagina )-->
+                                <%- include("../fragmente/formular-login.ejs") %>
+
+                                <button type="button" class="btn btn-primary btn-sm">Tap for fashion</button>
+                                <p>IP: <%- locals.ip %> </p>
+                                <img src="./resurse/imagini/f1.jpg" alt="imagine rochie" class = "rochie"  />
+                                <div id="prezentare">
+                                    <figure>
+                                        <picture>
+                                            <!-- il ia pe primul care se potriveste cu query-ul din media-->
+                                            <source srcset="./resurse/imagini/f6.jpg" media="(max-width:700px)"/>
+                                            <source srcset="./resurse/imagini/f5.jpg" media="(max-width:1200px)"/>
+                                            <img src="resurse/imagini/f3.jpg" alt="text" title="Boutique"/>
+                                        </picture>
+                                       <!--<figcaption>Fashion</figcaption>--> 
+                                    </figure>
+                                </div>
+                                
+                                <!-- Tag video VTT-->
+                                <div id = "video-container" >
+                                    <video width="320" height="240" controls preload="metadata" poster = "resurse/imagini/poster2.jpg">  
+                                        
+                                        <source src="resurse/dior.mp4" type="video/mp4">
+                                        <source src="resurse/dior.ogv" type="video/ogv">
+                                        <track default src="resurse/mesaje_ro.vtt" kind="captions" srclang="ro" label="romana" />
+                                        <track  src="resurse/mesaje_en.vtt" kind="captions" srclang="en" label="engleza" />
+                                        Browserul dumneavoastră nu suportă tagul video.
+                                    </video>                               
+                                </div>
+
+                                <a href = "http://www.google.com" target = "_blank"> Google link </a>
+                                
+                               
+                                <div class="container">
+                                    <p>Va multumim ca ne vizitati site-ul!</p>
+                                </div>
+
+                                <div class="col-container">
+                                    <p>Această pagină vă urează un călduros bun venit în universul nostru, unde pasiunea pentru modă se îmbină cu cele mai recente tendințe. Aici veți descoperi nu doar produsele noastre, ci și o sursă de inspirație pentru stilul dumneavoastră unic. Ne mândrim cu produsele noastre de <b>calitate</b>, <b>eleganță</b> și <b>stil</b>, reflectând cele mai recente tendințe din industria modei. Ne dorim ca fiecare vizită pe pagina noastră să fie o experiență plăcută. De aceea, echipa noastră de suport este mereu pregătită să vă asiste și să vă ofere sfaturi personalizate pentru a vă ajuta să faceți cele mai bune alegeri. Vă invităm să descoperiți universul nostru plin de stil și eleganță, să explorați colecțiile noastre variate și să vă bucurați de o experiență de shopping unică, creată special pentru dumneavoastră. Bine ați venit în lumea noastră, unde fiecare detaliu contează și fiecare client este prețuit!</p>
+                                </div>
+                    </section>
+                    
+                    <section id = "promotii">
+                        <h2 id="text-reflectat">Promotii</h2>
+                            <h2 id="reflexie-text">Promotii</h2>
+
+                        <article>
+                            <h3 class="titlu">Super ofertă de primavara!</h3>
+                            <p><abbr title = "Chic Boutique"> CB </abbr> ofera <b>reduceri de <s>10%</s> <ins> 20% </ins></b> in perioada <b>1-8 Martie</b>!</p>  
+                            <p>Rămâneți conectați pentru a descoperi cele mai atractive promoții ale sezonului! Fie că este vorba de reduceri semnificative sau de oferte limitate, aceasta este pagina unde veți găsi oportunități de a vă îmbogăți garderoba cu piese de excepție la prețuri avantajoase. Aici găsiți produse cu prețuri avantajoase, fără a compromite calitatea sau stilul!</p>
+                            <p>Profitați de transportul gratuit și descoperiți cele mai recente produse din colecțiile noastre la prețuri reduse!</p> 
+                        </article>
+                        
+                    </section>
+                    
+                    <section id = "calcul_pret">
+                        <section>
+                            <h2>Calcul reducere preț</h2>
+                            <p>Pretul final al unei rochii cu pretul initial P si reducerea X:</p>
+                            <!--Comentariu 
+                                <mi> - indentificatori
+                                <mo> - operatori
+                                <mn> - constante numerice
+                                <mrow> - subexpresii matematice
+                                xmlns - namespace-ul xml 
+                            -->
+                            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                                <mrow>
+                                    
+                                    <mi>P</mi>
+                                    <mo>=</mo>
+                                    <mi>P</mi>
+                                    <mo>-</mo>
+                                    <mfrac>
+                                        <mn>X</mn>
+                                        <mn>100</mn>
+                                    </mfrac>
+                                    <mo>&#x00D7;</mo>
+                                    <mi>P</mi>    
+                                    
+                                    
+                                </mrow>
+                            </math>
+                            <p>Prețul final al rochiei de $100 (initial) după aplicarea reducerii de 20% va fi:</p>
+                            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                                <mrow>
+                                    <mi>P</mi>
+                                    <mo>=</mo>
+                                    <mn>100</mn>
+                                    <mo>-</mo>
+                                    <mfrac>
+                                        <mn>20</mn>
+                                        <mn>100</mn>
+                                    </mfrac>
+                                    <mo>&#x00D7;</mo>
+                                    <mn>100</mn>
+                                    <mo>=</mo>
+                                    <mn>80</mn>
+                                </mrow>
+                            </math>
+                            <p>Astfel, prețul final al rochiei după aplicarea reducerii de 20% va fi <b>$80</b>.</p>
+                        </section>
+                        
+                        <section>
+                            <h2>Calcul preț final cu reduceri și transport</h2>
+                            <p>Să presupunem că aveți o rochie la prețul inițial de $120, iar pentru comenzile de peste $100, se ofera o reducere de 15%. <b>Costul de transport</b> este de $10.</p>
+                            <p>Prețul final al rochiei după aplicarea reducerii și adăugarea taxei de transport va fi:</p>
+                            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                                <mrow>
+                                    <mi>P</mi>
+                                    <mo>=</mo>
+                                    <mi>P</mi>
+                                    <mo>-</mo>
+                                    <mfrac>
+                                        <mn>15</mn>
+                                        <mn>100</mn>
+                                    </mfrac>
+                                    <mo>&#x00D7;</mo>
+                                    <mi>P</mi>
+                                    <mo>+</mo>
+                                    <mn>10</mn>
+                                </mrow>
+                            </math>
+                            <p>Astfel, prețul final al rochiei după aplicarea reducerii de 15% și adăugarea taxei de transport va fi:</p>
+                            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                                <mrow>
+                                    <mi>P</mi>
+                                    <mo>=</mo>
+                                    <mn>120</mn>
+                                    <mo>-</mo>
+                                    <mfrac>
+                                        <mn>15</mn>
+                                        <mn>100</mn>
+                                    </mfrac>
+                                    <mo>&#x00D7;</mo>
+                                    <mn>120</mn>
+                                    <mo>+</mo>
+                                    <mn>10</mn>
+                                    <mo>=</mo>
+                                    <mn>117</mn>
+                                </mrow>
+                            </math>
+                            <p>Astfel, prețul final al rochiei după aplicarea reducerii de 15% și adăugarea taxei de transport va fi <b>$117</b>.</p>
+                        </section>
+                    </section>
+    
+
+                    <section id = "intrebari">
+                        <div class ="icon-and-title">
+
+                            <i class="fa-regular fa-circle-question"></i> 
+                            <h2>Intrebari frecvente</h2> 
+
+                        </div>
+                            <details>
+                                <summary>Dispuneti de transport la domiciliu?</summary>
+                                    <p>Da, oferim servicii de transport la domiciliu pentru clienții noștri. Ne puteți furniza adresa de livrare și vom asigura ca rochia dorită să ajungă în siguranță la dumneavoastră.</p>
+                            </details> 
+                            <details>
+                                <summary>Care este timpul de livrare estimat pentru comenzile online?</summary>
+                                    <p>Timpul de livrare estimat poate varia în funcție de destinație și de opțiunile de livrare selectate. De obicei, încercăm să expediem comenzile în termen de 1-3 zile lucrătoare, iar apoi timpul de tranzit poate varia între 2 și 7 zile lucrătoare, în funcție de locație.</p>
+                            </details> 
+                            <details>
+                                <summary>Ce se întâmplă dacă rochia nu se potrivește sau nu este pe placul meu?</summary>
+                                    <p>Înțelegem că pot exista situații în care rochia nu se potrivește sau nu corespunde așteptărilor dumneavoastră. Avem o politică de returnare flexibilă. Vă rugăm să ne contactați în termen de 10 zile de la primirea comenzii și vă vom oferi informații detaliate privind procesul de returnare și schimb.</p>
+                            </details> 
+                            <details>
+                                <summary>Oferiți posibilitatea de personalizare a rochiilor?</summary>
+                                    <p>Da, avem opțiuni de personalizare disponibile pentru unele dintre rochiile noastre. Vă rugăm să ne contactați pentru a discuta despre cerințele dvs. specifice și vom face tot posibilul să vă oferim o rochie unică și personalizată.</p>
+                            </details> 
+                            <details>
+                                <summary>Aveți un sistem de fidelizare a clienților?</summary>
+                                    <p>Da, avem un program de loialitate pentru clienții noștri fideli. Prin intermediul acestui program, veți avea acces la diferite beneficii și reduceri pe măsură ce continuați să faceți achiziții de la noi. Pentru mai multe informații, vă rugăm să ne contactați sau să vizitați magazinul nostru online.</p>
+                            </details> 
+                            <details>
+                                <summary>Aveți rochii disponibile pentru închiriere pentru evenimente speciale?</summary>
+                                    <p>În prezent, nu oferim servicii de închiriere pentru rochii. Cu toate acestea, avem o varietate largă de rochii disponibile pentru achiziție, perfecte pentru orice eveniment special.</p>
+                            </details> 
+                    </section>
+    
+                    <div class="table-containter">
+                        <h2>Orar</h2>
+                        <table id="tab-orar">
+                            <thead>
+        
+                                <tr>
+                                    <th>Perioadă</th>
+                                    <th>Zi</th>
+                                    <th>Interval dimineata</th>
+                                    <th>Pauza</th>
+                                    <th>Interval seară</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="5">Zile<br/>Lucrătoare</td>
+                                    <td>Luni</td>
+                                    <td>8-12</td>
+                                    <td>12-14</td>
+                                    <td>14-21</td>
+                                </tr>
+                                <tr>
+                                    <td>Marti</td>
+                                    <td>8-12</td>
+                                    <td>12-14</td>
+                                    <td>14-21</td>
+                                </tr>
+                                <tr>
+                                    
+                                    
+                                    <td>Miercuri</td>
+                                    <td>8-12</td>
+                                    <td>12-14</td>
+                                    <td>14-21</td>
+                                </tr>
+                                <tr>
+                                  
+                                    
+                                    <td>Joi</td>
+                                    <td>8-12</td>
+                                    <td>12-14</td>
+                                    <td>14-21</td>
+                                </tr>
+                                <tr>
+                                  
+                                    
+                                    <td>Vineri</td>
+                                    <td>8-12</td>
+                                    <td>12-14</td>
+                                    <td>14-21</td>
+                                </tr>
+                                <tr>
+                                   
+                                    <td rowspan="2">Weekend</td>
+                                    <td>Sambata</td>
+                                    <td>10-14</td>
+                                    <td>-</td>
+                                    <td>Inchis</td>
+                                </tr>
+                                <tr>
+                            
+                                    <td>Duminica</td>
+                                    <td>10-14</td>
+                                    <td>-</td>
+                                    <td>Inchis</td>
+                                </tr>
+                            </tbody> 
+                            <tfoot><tr><td colspan="5"></br>Închis cu ocazia sărbătorilor legale!</td></tr></tfoot>
+                        </table> 
+                    </div>
+    
+                    <figure id="fig1" class="fg-img">
+                        <img class="sale" src="resurse/imagini/sale.jpg" alt="sale" width="600px">
+                        <figcaption>Sale</figcaption>
+                    </figure>
+    
+                    <figure id="fig2" class="fg-img">
+                        <div class="image-container">
+                            <img class="promo" src="resurse/imagini/sal2.jpg" alt="promo" width="600px">
+                        </div>
+                        <!-- <figcaption>Soon</figcaption>-->
+                    </figure>
+
+                <section id="lista_utilizatori">
+                    <h2>Lista de utilizatori</h2>
+                    <p>Bun venit în comunitatea Chic Boutique! Mai jos găsiți o listă completă a utilizatorilor înregistrați pe platforma noastră. Aceștia reprezintă membrii activi ai comunității noastre, pasionați de modă și stil. Fiecare utilizator contribuie la această comunitate vibrantă, aducând idei și inspirație pentru un stil de viață elegant și modern. Consultați lista pentru a descoperi noi prieteni și a vă conecta cu alte femei care împărtășesc aceeași pasiune pentru rochii și modă.</p>
+                </section>
+
+                <section id="calendar">
+                    <h2>Calendar de evenimente</h2>
+                    <p>Explorați calendarul nostru de evenimente pentru a rămâne la curent cu toate activitățile interesante pe care le organizăm. De la prezentări de modă și lansări de colecții, până la workshopuri de styling și întâlniri exclusive, calendarul nostru este actualizat constant pentru a vă oferi toate informațiile necesare despre evenimentele Chic Boutique. Nu ratați ocazia de a participa la evenimentele noastre speciale, unde puteți descoperi cele mai noi tendințe și vă puteți întâlni cu alți pasionați de modă.</p>
+                </section>
+
+                <section id="date_utilizatori">
+                    <h2>Date utilizatori si statistici</h2>
+                    <p>În această secțiune, oferim informații detaliate despre utilizatorii Chic Boutique. Aici puteți găsi statistici despre activitatea pe platformă, inclusiv preferințele de cumpărare și comportamentul de navigare. Analizele demografice și comportamentale ne ajută să înțelegem mai bine nevoile comunității noastre și să îmbunătățim experiența de shopping. Aceste date sunt esențiale pentru a vă oferi produse și servicii care să răspundă cel mai bine așteptărilor dumneavoastră.</p>
+                </section>
+
+                <section id="date_server">
+                    <h2>Site si server</h2>
+                    <p>Chic Boutique se angajează să ofere o experiență online de înaltă calitate. În această secțiune, oferim informații detaliate despre performanța site-ului și serverelor noastre. Puteți găsi statistici privind uptime-ul, timpii de răspuns și alte detalii tehnice care asigură buna funcționare a platformei noastre. Ne străduim să menținem un serviciu stabil și rapid, pentru ca dumneavoastră să vă puteți bucura de o experiență de shopping fără probleme. Transparența este importantă pentru noi, de aceea vă oferim aceste informații pentru a vă asigura că facem tot posibilul pentru a vă oferi cele mai bune servicii.</p>
+                </section>
+                
+        </div>
+
+                <section id="galerie-statica">
+                    <h2>Galerie Chic Boutique</h2>
+                    <div id="grid-galerie">
+                        <% 
+                        var d = new Date(); ///data curenta
+                        var currentMinute = d.getMinutes();
+                        var currentSfertOra;
+                        if (currentMinute <= 15) currentSfertOra = 1;
+                            else if (currentMinute <= 30) currentSfertOra = 2;
+                                else if (currentMinute <= 45) currentSfertOra = 3;
+                                    else currentSfertOra = 4;
+
+                        let imaginiAfisate = 0;///mr de imagini afisate
+                        for (let imag of locals.imagini) { 
+                            // Verificam daca sfertul de ora al imaginii este cel curent
+                            if (imag.sfertOra.includes(currentSfertOra))
+                            {   
+                                imaginiAfisate++;
+                                if (imaginiAfisate > 10) break; /// trunchiaza la 10
+                                %>
+                                <figure>
+                                    <picture>
+                                        <source srcset="<%= imag.fisier_mediu %>" media="(max-width:1000px)"/>
+                                        <source srcset="<%= imag.fisier_mic %>" media="(max-width:500px)"/>
+                                        <img src="<%= imag.fisier %>" alt="<%= imag.alt || imag.fisier %>" title="<%= imag.descriere %>"/>
+                                    </picture>
+                                    <figcaption><%= imag.descriere %></figcaption>
+                                </figure>
+                            <% } %>
+                        <% } %>
+                    </div>
+                </section>
+
+        
+                </br>
+                <hr class="hr-stilizat">
+                <section id = "limited_edition">
+
+                    <h2>Limited edition:</h2>
+                        <p>Colecția <q>Limited Edition</q> este esența exclusivității și inovației, o celebrare a măiestriei artizanale îmbinată cu viziunea avangardistă a designului de modă. Această colecție reprezintă apogeul creativității noastre, fiecare piesă fiind rezultatul unei atenții meticuloase la detalii și al unei pasiuni neclintite pentru frumos și unic.</p>
+                        <p> <strong> Disponibile doar pentru o perioadă limitată de timp! </strong></p>
+                    
+                    <div class = "container-iframe">
+                        
+                        <div class="taburi-iframe">
+                            <a href="https://www.youtube.com/embed/gJpXlRkW6Fw" target="ifr-video">Summer Collection</a>
+                            <a href="https://www.youtube.com/embed/YZW8RwJunG0" target="ifr-video" >City chic Collection</a>
+                            <a href="https://www.youtube.com/embed/0HLSVb908cA" target="ifr-video" >Event Collection</a>
+                        </div>
+    
+                        <iframe name="ifr-video" width="560" height="315" src="https://www.youtube.com/embed/gJpXlRkW6Fw?si=Y258vgBU7jFCIvcF" 
+                        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+                        picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    
+                    <br> 
+                    <br>
+                </section>
+
+
+            </main>
+
+            <%- include("../fragmente/galerie_animata.ejs") %>
+            <%- include("../fragmente/footer.ejs") %>
+        
+
+        </body>
+    </html>
+
+

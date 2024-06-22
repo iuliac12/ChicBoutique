@@ -1,0 +1,230 @@
+
+html{
+    font-size: 18px;
+    --culoare1:rgb(234, 196, 202); 
+    --culoare2:rgb(165, 49, 70);
+    --culoare3:rgb(154, 80, 146);
+    --culoare4:rgb(228, 91, 196);
+    --culoare5:white;
+    --culoare6:black;
+    --culoare7: rgb(168, 123, 151);
+
+    --grid_gap: 0.7rem;
+}
+
+
+#grid-pagina{
+    display: grid;
+    gap: var(--grid_gap);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "welcome welcome welcome welcome"
+                         "welcome welcome welcome welcome"
+                         "calendar promotii promotii orar" 
+                         "fig1 calcul_pret calcul_pret intrebari"
+                         "fig2 calcul_pret calcul_pret intrebari"
+                         "date_server date_server lista_utilizatori date_utilizatori "
+                         ;
+
+}
+#grid-pagina>*{
+    border: 2px solid var(--culoare2);
+    padding: 0.8em;
+}
+
+#grid-pagina>figure{
+    margin:0;
+}
+
+#welcome{
+    grid-area: welcome;
+}
+
+#promotii{
+    grid-area: promotii;
+}
+
+#calcul_pret{
+    grid-area: calcul_pret;
+}
+
+#intrebari{
+    grid-area: intrebari;
+}
+
+#orar{
+    grid-area: orar;
+}
+
+#lista_utilizatori{
+    grid-area: lista_utilizatori;
+}
+
+#calendar{
+    grid-area: calendar;
+}
+
+#date_utilizatori{
+    grid-area: date_utilizatori;
+}
+
+#date_server{
+    grid-area: date_server;
+}
+
+#fig1{
+    grid-area: fig1;
+}
+
+#fig2{
+    grid-area: fig2;
+}
+
+.sale, .promo{
+    width: 100%;
+}
+
+
+.rochie{
+    width: 50%;
+}
+
+#prezentare img{
+    width: 50%;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+
+    html{
+        font-size: 0.6em;
+    }
+    #grid-pagina{
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-areas: "welcome welcome "
+                         "promotii calendar" 
+                         "intrebari orar" 
+                         "fig1 calcul_pret"
+                         "fig2 calcul_pret"
+                         "date_server lista_utilizatori"
+                         "date_server date_utilizatori";
+
+    }
+}
+
+@media screen and (max-width: 700px) {
+    html{
+        font-size: 0.3em;
+    }
+    #grid-pagina{
+        display: block;
+
+    }
+}
+
+
+body{
+    display: block;
+    background-size: cover;
+}
+
+/*Linkuri pag*/
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Headingul de nivel 1 */
+h1 {
+    text-align: center;
+}
+
+/* Meniu sub forma de lista neordonata */
+nav ul {
+    list-style-type: none;
+}
+
+/* Page break */
+nav {
+    page-break-after: always;
+}
+
+footer {
+    page-break-before: always;
+}
+
+
+/* Watermark
+.watermark {
+    position: fixed;
+    bottom: 1cm;
+    right: 1cm;
+    width: 4cm;
+    height: 1cm;
+    opacity: 0.4;
+    border: 3px solid var(--culoare6);
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.watermark div {
+    line-height: 1; 
+    margin: 0;
+}
+ */
+/*Banner*/
+
+#banner{
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    border: 4px inset var(--culoare6);
+    }
+
+@media print
+{
+    img, video, iframe, #link-top{
+        display: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+    }
+    h1 + nav {
+        page-break-after: always;
+    }
+
+    footer {
+        page-break-before: always;
+    }
+
+    @page :first {
+        margin-top: 5cm;
+    }
+
+
+
+    /* Margini pentru paginile din stanga si dreapta */
+    @page :left {
+        margin-left: 3cm;
+        margin-right: 1cm;
+    }
+
+    @page :right {
+        margin-left: 1cm;
+        margin-right: 3cm;
+    }
+
+}

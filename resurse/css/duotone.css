@@ -1,0 +1,58 @@
+html{
+    font-size: 18px;
+    --culoare1:rgb(234, 196, 202); 
+    --culoare2:rgb(165, 49, 70);
+    --culoare3:rgb(154, 80, 146);
+    --culoare4:rgb(228, 91, 196);
+    --culoare5:white;
+    --culoare6:black;
+    --culoare7: rgb(168, 123, 151);
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;  
+}
+  
+
+
+.image-container img.promo {
+    margin: 0; 
+    padding: 0; 
+    display: block; 
+    width: 100%; 
+    height: auto; 
+  }
+
+  .image-container::before,
+  .image-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Pentru culoarea c1 */
+  .image-container::before {
+    background: linear-gradient(to right, var(--culoare1), var(--culoare1));
+    mix-blend-mode: multiply; 
+    transition: transform 1.2s ease; 
+    transform: translateX(-100%); /* Initial ascuns spre stanga */
+  }
+  
+  /* Pentru culoarea c2 */
+  .image-container::after {
+    background: linear-gradient(to left, var(--culoare4), var(--culoare4));
+    mix-blend-mode: multiply;
+    transition: transform 1.2s ease; 
+    transform: translateX(100%); /* Initial ascuns spre dreapta */
+  }
+  
+  /* Stilurile pentru efectul la hover */
+  .image-container:hover::before,
+  .image-container:hover::after {
+    transform: translateX(0); /* La hover, afiseaza pseudoelementele pe imagine */
+  }
+  

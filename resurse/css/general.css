@@ -1,0 +1,336 @@
+html{
+  --culoare1:rgb(234, 196, 202); 
+  --culoare2:rgb(165, 49, 70);
+  --culoare3:rgb(154, 80, 146);
+  --culoare4:rgb(228, 91, 196);
+  --culoare5:white;
+  --culoare6:black;
+  --culoare7: rgb(168, 123, 151);
+}
+
+body{
+  --culoare-mov:#C886FF;
+  --culoare-roz-inchis:rgb(229,173,198);
+  --culoare-roz-inchis-t:rgb(229,173,198,0.5);
+  --cl-marcare:rgb(255,219,235);
+  --cl-light-t:rgba(255,255,255,0.7);
+  --cl-text:black;
+  --imag-body-backgr:url("../imagini/light-background.jpg");
+  --gradient-body:linear-gradient(transparent, transparent 30%, white 50%, transparent 70%, transparent);
+}
+
+
+/* Body moon */
+body.moon{
+  
+  text-shadow:0px 0px 2px rgb(62, 55, 55),0px 0px 1px rgb(57, 50, 50),0px 0px 1px rgb(83, 24, 24);
+  --imag-body-backgr:url("../imagini/dark-background.jpg");
+  --gradient-body:linear-gradient(transparent, transparent 45%, rgba(255,255,255,0.5) 50%, transparent 75%, transparent);
+}
+
+body.moon p,a,address, address a {
+  color: white;
+}
+
+
+body.moon label,
+body.moon span,
+body.moon fieldset,
+body.moon legend,
+body.moon summary,
+body.moon th,
+body.moon td {
+  color: white;
+}
+
+body.moon h1,
+body.moon h2,
+body.moon h3{
+  color: white;
+  font-weight: bold; 
+}
+
+/* Body palette */
+
+body.palette{
+  
+  --imag-body-backgr:url("../imagini/background_pastel.jpg");
+  --gradient-body:linear-gradient(transparent, transparent 45%, rgba(231, 102, 210, 0.5) 50%, transparent 75%, transparent);
+
+}
+
+body.palette a,address, address a {
+  color:var(--culoare5);
+}
+
+body.palette  p{
+  color: var(--culoare2)
+}
+
+body.palette header h1{
+  color: var(--culoare2)
+}
+
+
+body.palette label,
+body.palette span,
+body.palette fieldset,
+body.palette legend,
+body.palette summary,
+body.palette th,
+body.palette td {
+  color: var(--culoare2);
+}
+
+body.palette h1{
+    color:var(--culoare2);
+}
+
+body.palette h2,
+body.palette h3{
+  color: var(--culoare2);
+}
+
+body{
+
+  margin-top:0;
+  background-image: var(--imag-body-backgr);
+}
+
+/* ---- link sus ------*/
+
+#link-top {
+  position: fixed;
+  bottom: 0.3em;
+  left: 0.3em;
+  font-size: 35px;
+  opacity: 0.5;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: linear-gradient(to top, var(--culoare7), var(--culoare1), var(--culoare7));
+}
+
+#link-top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 4px dashed var(--culoare3);
+  border-radius: 50%;
+  box-sizing: border-box;
+  transition: transform 1.2s linear;
+}
+
+#link-top:hover::before {
+  transform: rotate(180deg);
+}
+
+#link-top:hover {
+  opacity: 1;    
+}
+
+#sageata {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+#link-top:hover>#sageata {
+  font-size: 40px;
+}
+
+/*Stilizare taburi */
+
+
+.container-iframe{  
+  display: flex;
+  flex-direction: row-reverse;
+  width: 60%;
+  margin: 0;
+}
+
+.taburi-iframe{
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-end; 
+
+}
+
+.taburi-iframe>a { /*stilizare taburi*/
+  display: block;
+  background-color: var(--culoare1);
+  box-shadow: 0 0 10px var(--culoare2) inset, 
+              0 0 10px var(--culoare6); 
+  padding: 0.6em;
+  border-radius: 0 30px 0 0; /*dreapta sus*/
+  text-decoration: none;
+}
+
+.taburi-iframe>a:last-child{
+  margin-bottom: 0;  
+  box-shadow: 0 0 10px var(--culoare2) inset, 
+              0 0 10px var(--culoare6);  
+}
+
+.taburi-iframe > a:hover {
+  color: var(--culoare5); 
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 10px var(--culoare2) inset, 
+              0 0 10px var(--culoare6); 
+}
+
+
+
+/*Stilizare tabel */
+
+#table-containter{
+  width: 100%;
+}
+
+#tab-orar{
+  width: 100%;
+  border-collapse: collapse;
+  border: 5px double var(--culoare2);
+}
+
+#tab-orar th, #tab-orar td {
+  /* td = celule din tabel
+     th = header
+     tr = row    
+  */
+  border: 1px solid var(--culoare6);
+  padding: 8px;
+  text-align: center;
+  transition:  all 0.5s linear;
+}
+
+#tab-orar tbody tr:nth-child(even) td {
+  color: var(--culoare4); 
+  background-color: var(--culoare5); 
+}
+
+#tab-orar tbody tr:nth-child(odd) td {
+  color: var(--culoare3); 
+  background-color: var(--culoare1);
+}
+
+#tab-orar tbody tr:hover td {
+  border-width: 3px; 
+  background-color: var(--culoare3); 
+  color: var(--culoare5); 
+  font-weight: bold;
+  transition: all 0.75s ease-in-out;
+
+}
+
+.table-container {
+  max-width: 100%;
+  overflow-x: auto; /* scrollbar orizontal */
+}
+
+
+/* Linkurile vizitate au culoare diferita */
+a:visited{ 
+  color: var(--culoare2);
+}
+
+
+/* Stilizare linkuri externe */
+
+footer a[href^="http"] { 
+  position: relative;
+}
+
+footer a[href^="http"]::before {
+  content: "⮳";
+  font-size: 1.5em;
+  position: absolute;
+  top: -0.3em;
+  left: -1.8em;
+  transition: color 0.3s ease-in-out;
+  z-index: 0;
+}
+
+
+/* Schimbare culoare simbol la aducerea cursorului pe link extern */
+
+footer a[href^="http"]:hover::before {
+  color: var(--culoare6); 
+}
+
+/* link activ din pagina*/
+a:active {
+  border: 2px solid var(--culoare4); 
+}
+
+
+/* stilizare link din main */
+
+main a {
+  position: relative; /* pt a pozitiona elementul ::before */
+  display: inline-block;
+  transition: transform 1s ease-in-out; 
+  z-index: 0; /* gradientul nu acoperă textul linkului */
+}
+
+#welcome a::before {
+  content: '';
+  position: absolute; /* pozitioneaza absolut fata de link */
+  top: 50%; /* porneste din centru */
+  left: 50%;
+  width: 0;
+  height: 0;
+  /* seteaza imaginea ca gradient radial */
+  background: radial-gradient(circle, var(--culoare1) 0%, var(--culoare1) 40%, transparent 80%, transparent 100%);
+  background-position: center;
+  border-radius: 70%;
+  transform: translate(-50%, -50%);
+  transition: width 1s ease-in-out, height 1s ease-in-out;
+  z-index: -1;  /* plasat in spatele textului linkului */
+  filter: blur(2px);
+
+}
+
+#welcome a:hover::before {
+  width: 120%;
+  height: 120%;
+}
+
+
+
+/*Stilizare video VTT*/
+
+#video-container {
+  width: 100%;
+  max-width: 700px; 
+  min-width: 320px; 
+}
+
+video {
+  width: 100%; 
+  height: auto;
+}
+
+
+/* Stiluri pentru subtitrări */
+::cue {
+  color: var(--culoare2); 
+  background-color: var(--culoare5);
+  text-align: center; 
+  line-height: 1;
+  display: block;
+  padding: 2px 4px;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+::cue(i) {
+  font-style: italic;
+  font-weight: normal;
+}

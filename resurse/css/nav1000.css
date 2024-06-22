@@ -1,0 +1,21 @@
+@media screen and (max-width: 1000px)
+{
+    nav{
+        --inaltime-meniu:2.2em;
+        --latime-buton:120px;
+    }
+    
+    #acasa-mediu{
+        display: block;
+    }
+    
+    #acasa{
+        display: none;
+    }
+    
+    html{
+        font-size: 12px;
+    }
+
+}
+

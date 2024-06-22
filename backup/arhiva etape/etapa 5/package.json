@@ -1,0 +1,49 @@
+{
+  "name": "tehnici-web",
+  "version": "1.0.0",
+  "description": "Chic Boutique se distinge prin oferirea unor modele exclusive de rochii, proiectate pentru femeia moderna si eleganta. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fashion",
+    "rochii",
+    "casual",
+    "eleganta",
+    "moda",
+    "stil",
+    "confort",
+    "gama",
+    "garderoba",
+    "piese",
+    "versatile",
+    "rochie",
+    "dama",
+    "rochie",
+    "seara",
+    "rochie",
+    "cocktail",
+    "rochie",
+    "scurta",
+    "rochie",
+    "lunga",
+    "eveniment",
+    "limited",
+    "edition",
+    "transport",
+    "la",
+    "domiciliu",
+    "Bucuresti",
+    "Romania"
+  ],
+  "author": "Cucu Iulia-Maria",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "sass": "^1.75.0",
+    "sharp": "^0.33.3"
+  }
+}
